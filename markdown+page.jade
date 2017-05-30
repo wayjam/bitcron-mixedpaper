@@ -1,0 +1,11 @@
+extends base
+if request.path.startswith('/page')
+	path1 = request.get_offset_path(1)
+	post = posts.get_one(path1 + '.md') or posts.get_one(path1 + '.txt') or posts.get_one(path1 + '.markdown')
+block title
+	title= post.title + " - " + site.title
+block content
+	.detail
+		article.post
+			.content
+				.post_body= post.content

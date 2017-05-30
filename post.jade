@@ -1,0 +1,27 @@
+if post.status != 'public'
+	+request.redirect(post.url_path)
+extends base
+block title
+	title= post.title + " - " + site.title
+block content
+	.detail
+		article.post
+			.content
+				h2.title= post.title
+				.post_body= post.content
+				.info
+					span.date
+						span= post.date.format('%Y-%m-%d %H:%M')
+					ul.tags
+						if post.tags
+							for tag in post.tags
+								li
+									a(href="/tag/{{tag}}")= tag
+			.other_posts.clearfix
+				span.pre
+					if pre_one
+						a(href='{{pre_one.url}}')= "&laquo;" +  pre_one.title
+				span.next
+					if next_one
+						a(href='{{next_one.url}}')=  next_one.title  + "&raquo;"
+		include include/comments.jade

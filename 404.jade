@@ -1,0 +1,70 @@
+html
+	head
+		meta(name="viewport", content="width=device-width")
+		title= "HTTP 404 - " + site.title
+		style(type="text/css")
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html, body {
+				width: 100%;
+				height: 100%;
+				font: 200 25px/1.5 Helvetica Neue, Helvetica, Sans-Serif;
+				-webkit-font-smoothing: antialiased;
+				position: relative;
+				background-color: #00BCD4;
+				color: #fff;
+			}
+			h1 {
+				font-size: 10em;
+				font-weight: 400;
+				font-family:cursive;
+				text-align: center;
+				display: block;
+				text-shadow: -1px -1px 6px #aaa;
+			}
+			a {
+				color: #757575;
+				text-decoration: none;
+			}
+			p {
+				color: #757575;
+				font-size: 1em;
+				line-height: 2em;
+				text-align:left;
+			}
+			a:hover {
+				color: #212121;
+				cursor: pointer;
+			}
+			.center {
+				margin: 0 auto;
+				position: relative;
+				top: 5%;
+			}
+			p.back{
+				text-align:right;
+			}
+			.block{
+				background-color: #fff;
+				max-width: 25em;
+				margin: 0 auto;
+				border-radius: 5px;
+				width: 500px;
+				box-shadow: 2px 4px 10px #bbb;
+				padding: 1em .5em;
+			}
+			.line{
+				border-top:1px solid #ccc;
+			}
+
+	body
+		.center
+			h1 404
+			.block
+				p Page Not Found.
+				.line
+				p.back
+					small back to 
+					a(href="/") &nbsp;Home

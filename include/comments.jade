@@ -1,0 +1,11 @@
+aside#comments_container
+	if site.configs.hide_comments
+		// comment hidden
+	else
+		.comments
+			if site.configs.third_party_comments_script
+				{{ site.configs.third_party_comments_script }}
+				//a(href="#comments_container", onclick="showComment();",id='showComment')
+					b='评论/查看评论 (Show Comments)'
+			else
+				+post.comments_as_html()

@@ -1,0 +1,48 @@
+html
+	+i18n('Home', '首页', 'zh_cn')
+	+i18n('Albums', '相册', 'zh_cn')
+	+i18n('Categories', '分类', 'zh_cn')
+	+i18n('Archive', '归档', 'zh_cn')
+	+i18n('Tags', '标签', 'zh_cn')
+	+i18n('About', '关于', 'zh_cn')
+	+i18n('Links', '友链', 'zh_cn')
+	head
+		+mobile_meta()
+		meta(name="keywords", content=site.configs.keywords.escaped)
+		meta(name="description", content=site.configs.description.escaped or site.configs.sub_title.escaped)
+		block title
+			title= request.args.s or post.title or tags.join('+') or category.title or site.title
+		+h.load('/template/static/basic.css  /template/static/style.css')
+	body
+		header
+			.header_wrapper
+				h1.sitetitle
+					a(href='/',title=raw_content)=site.title
+				nav
+					ul
+						li
+							a(href="/")= _('Home')
+						if has('images')
+							li
+								a(href='/album')= _('Albums')
+							if not has('posts')
+								+redirect('/album')
+						li
+							a(href='/archive')= _('Archive')
+						if site.tags
+							li
+								a(href='/tags')= _('Tags')
+						pages = get_data(type="post", status="page", limit=3)
+						for page in pages
+							li
+								a(href='/'+page.url_path)= page.title
+						li
+							a(href="/feed") RSS
+		#container
+			block content
+		footer
+			span= "Powered By "
+				a(rel="nofollow", target="_blank", href="https://bitcron.com/?s=f")= 'Bircorn.com'
+			span= "Design by "
+				a(rel="nofollow", target="_blank", href="https://github.com/imsuwj/bitcron-mixedpaper")= 'WayJam' 
+			span= "&copy;2013-<script>document.write(new Date().getFullYear())</script> "+ site.title

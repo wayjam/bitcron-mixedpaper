@@ -1,0 +1,15 @@
+extends base
+block content
+	article.list
+		ul.listing
+			if request.path.strip('/')=='tags'
+				entries = site.tags
+				for tag_name, tag_count in entries
+					li.listing_item.block_item
+						a(href="/tag/%s" % tag_name, title=tag_name)= "%s(%s)" % (tag_name,tag_count)
+			else
+				entries = posts.categories
+				for entry in entries
+					li.listing_item.block_item
+						a(href=entry.url, title=entry.path)= entry.path + "(%s)"%entry.posts_count
+	include include/paginator.jade
