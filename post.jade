@@ -18,10 +18,11 @@ block content
 								li
 									a(href="/tag/{{tag}}")= tag
 			.other_posts.clearfix
-				span.pre
-					if pre_one
-						a(href='{{pre_one.url}}')= "&laquo;" +  pre_one.title
+				span.prev
+					if posts.previous_one
+						a(href='{{posts.previous_one.url}}')= "&laquo;" +  posts.previous_one.title
 				span.next
-					if next_one
-						a(href='{{next_one.url}}')=  next_one.title  + "&raquo;"
+					if posts.next_one
+						a(href='{{posts.next_one.url}}')=  posts.next_one.title  + "&raquo;"
+				.clearfix
 		include include/comments.jade

@@ -185,11 +185,11 @@ footer span {
 .other_posts .next {
     width: 50%;
     text-align: right;
-    display: inline-block;
+    float: right;
 }
 
-.other_posts .pre {
-    display: inline-block;
+.other_posts .prev {
+    float: left;
     width: 50%;
 }
 
