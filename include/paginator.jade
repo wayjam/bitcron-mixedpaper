@@ -1,8 +1,7 @@
-.pager
-	if request.path.strip('/') == ''
-		if paginator.has_pre
-			a.round.pre(href=paginator.pre_url, rel='prev') Prev
-		if paginator.has_next
-			a.round.next(href=paginator.next_url, rel='next') Next
-	else
-		+h.paginator()
+.clearfix
+path = request.path.split('page/')[0]
+if path == '/'
+	+h.paginator(style="simple",  pre_label='Prev', next_label='Next',show_page_of=False)
+else
+	+h.paginator(style="auto")
+

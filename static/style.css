@@ -64,7 +64,7 @@ footer {
     background-color: #5c5757;
     color: #fff;
     border-top: 5px solid #ee6e73;
-    margin-top: 5em;
+    margin-top: 4em;
 }
 
 footer a {
@@ -87,13 +87,15 @@ footer span {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.pager {
+.pagination {
     padding: 0 2em;
 }
 
-.pager a {
-    width: 55.5px;
-    height: 55.5px;
+.pagination a {
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px 0px, rgba(0, 0, 0, 0.227451) 0px 3px 10px 0px;
     overflow: hidden;
@@ -101,23 +103,37 @@ footer span {
     outline: 0;
     transition: all .3s ease-out;
     border-radius: 50%;
-    background-color: #673AB7;
+    background-color: #00BCD4;
     text-align: center;
     vertical-align: middle;
-    line-height: 56px;
     color: #fff;
+    display: inline-block;
 }
 
-.pager a.next {
+.pagination a.next,
+.pagination a.prev {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+}
+
+
+.pagination a.next {
     float: right;
 }
 
-.pager a.pre {
+.pagination a.prev {
     float: left;
 }
 
-.pager a:hover {
+.pagination a:hover {
     opacity: .7;
+}
+
+.pagination a.current {
+    background: #B2EBF2;
+    color:#333;
+    cursor: default;
 }
 
 .content .title {
@@ -202,7 +218,6 @@ ul.list_with_title li ul {
 }
 
 li.listing_item {
-   
     border: 1px dashed #ddd;
 }
 
@@ -225,7 +240,7 @@ li.listing_item:hover>span {
 
 li.listing_item a {
     display: block;
-     padding: 1em;
+    padding: 1em;
 }
 
 li.listing_item a:hover {

@@ -2,7 +2,7 @@ extends base
 block title
 	title= "Archive - " + site.title
 block content
-	entries = get_data(type='post',limit=20, sort='desc').group('-date:year')
+	entries = get_data(type='post',limit=25, sort='desc').group('-date:year')
 	article.list
 		ul.list_with_title
 			for year, year_posts in entries
