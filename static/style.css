@@ -111,6 +111,7 @@ footer span {
 }
 
 .pagination a.next,
+.pagination a.pre,
 .pagination a.prev {
     width: 65px;
     height: 65px;
