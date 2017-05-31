@@ -29,8 +29,12 @@ html
 		#container
 			block content
 		footer
-			span= "Powered By "
-				a(rel="nofollow", target="_blank", href="https://bitcron.com/?s=f")= 'Bircorn.com'
-			span= "Design by "
-				a(rel="nofollow", target="_blank", href="https://github.com/imsuwj/bitcron-mixedpaper")= 'WayJam' 
-			span= "&copy;2013-<script>document.write(new Date().getFullYear())</script> "+ site.title
+			p
+				span= '&copy; %s '%site.now.year
+					a(href="/", title=site.title)= site.title
+				span= "Powered By "
+					a(rel="nofollow", target="_blank", href="https://bitcron.com/?s=f")= 'Bircorn.com'
+				span= "Design by "
+					a(rel="nofollow", target="_blank", href="https://github.com/imsuwj/bitcron-mixedpaper")= 'WayJam' 
+				
+			

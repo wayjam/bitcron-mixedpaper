@@ -62,17 +62,22 @@ footer {
     text-align: center;
     padding: 1.8em 0;
     background-color: #5c5757;
-    color: #fff;
+    color: #e3e3e3;
     border-top: 5px solid #ee6e73;
     margin-top: 4em;
 }
 
+footer p{
+    padding: .1em 0;
+    margin: 0;
+}
+
 footer a {
-    color: #fff;
+    color: #eee;
 }
 
 footer span {
-    padding: 0 1em;
+    padding: 0 .6em;
 }
 
 #container {
