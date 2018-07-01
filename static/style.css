@@ -62,18 +62,18 @@ footer {
     text-align: center;
     padding: 1.8em 0;
     background-color: #5c5757;
-    color: #e3e3e3;
+    color: #e5e5e5;
     border-top: 5px solid #ee6e73;
     margin-top: 4em;
 }
 
-footer p{
+footer p {
     padding: .1em 0;
     margin: 0;
 }
 
 footer a {
-    color: #eee;
+    color: #fff;
 }
 
 footer span {
@@ -123,7 +123,6 @@ footer span {
     line-height: 65px;
 }
 
-
 .pagination a.next {
     float: right;
 }
@@ -138,7 +137,7 @@ footer span {
 
 .pagination a.current {
     background: #B2EBF2;
-    color:#333;
+    color: #333;
     cursor: default;
 }
 
@@ -268,7 +267,6 @@ li.block_item {
     display: inline-block;
     margin: .5em .2em;
 }
-
 
 /*********************
   Post
@@ -473,6 +471,293 @@ blockquote {
     padding: .5em;
 }
 
+/********************
+  Code Hightlight
+********************/
+
+.codehilite pre {
+    font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+    border-top: 1px solid #d1d7dc;
+    overflow: auto;
+}
+
+.codehilite .hll {
+    background-color: #ffffcc;
+}
+
+.codehilite .c {
+    color: #8e908c;
+}
+
+.codehilite .err {
+    color: #c82829;
+}
+
+.codehilite .k {
+    color: #8959a8;
+    font-weight: bold;
+}
+
+.codehilite .n {
+    color: #555555;
+}
+
+.codehilite .o {
+    color: #555555;
+}
+
+.codehilite .p {
+    color: #555555;
+}
+
+.codehilite .cm {
+    color: #999999;
+}
+
+.codehilite .cp {
+    color: #1e889b;
+}
+
+.codehilite .c1 {
+    color: #8e908c;
+}
+
+.codehilite .cs {
+    color: #8B008B;
+    font-weight: bold;
+}
+
+.codehilite .gd {
+    color: #aa0000;
+}
+
+.codehilite .ge {
+    font-style: italic;
+}
+
+.codehilite .gr {
+    color: #aa0000;
+}
+
+.codehilite .gh {
+    color: #000080;
+    font-weight: bold;
+}
+
+.codehilite .gi {
+    color: #00aa00;
+}
+
+.codehilite .go {
+    color: #888888;
+}
+
+.codehilite .gp {
+    color: #555555;
+}
+
+.codehilite .gs {
+    font-weight: bold;
+}
+
+.codehilite .gu {
+    color: #800080;
+    font-weight: bold;
+}
+
+.codehilite .gt {
+    color: #aa0000;
+}
+
+.codehilite .kc {
+    color: #8B008B;
+    font-weight: bold;
+}
+
+.codehilite .kd {
+    color: #8959a8;
+    font-weight: bold;
+}
+
+.codehilite .kn {
+    color: #8B008B;
+    font-weight: bold;
+}
+
+.codehilite .kp {
+    color: #8B008B;
+    font-weight: bold;
+}
+
+.codehilite .kr {
+    color: #8B008B;
+    font-weight: bold;
+}
+
+.codehilite .kt {
+    color: #902000;
+    font-weight: bold;
+}
+
+.codehilite .m {
+    color: #B452CD;
+}
+
+.codehilite .s {
+    color: #f5871f;
+}
+
+.codehilite .na {
+    color: #f5871f;
+}
+
+.codehilite .nb {
+    color: #4271ae;
+}
+
+.codehilite .nc {
+    color: #008b45;
+    font-weight: bold;
+}
+
+.codehilite .no {
+    color: #00688B;
+}
+
+.codehilite .nd {
+    color: #0a6eda;
+}
+
+.codehilite .ni {
+    color: #555555;
+}
+
+.codehilite .ne {
+    color: #008b45;
+    font-weight: bold;
+}
+
+.codehilite .nf {
+    color: #008b45;
+}
+
+.codehilite .nl {
+    color: #555555;
+}
+
+.codehilite .nn {
+    color: #4271ae;
+}
+
+.codehilite .nx {
+    color: #555555;
+}
+
+.codehilite .py {
+    color: #555555;
+}
+
+.codehilite .nt {
+    color: #c82829;
+    font-weight: bold;
+}
+
+.codehilite .nv {
+    color: #00688B;
+}
+
+.codehilite .ow {
+    color: #8B008B;
+}
+
+.codehilite .w {
+    color: #bbbbbb;
+}
+
+.codehilite .mb {
+    color: #B452CD;
+}
+
+.codehilite .mf {
+    color: #B452CD;
+}
+
+.codehilite .mh {
+    color: #B452CD;
+}
+
+.codehilite .mi {
+    color: #f5871f;
+}
+
+.codehilite .mo {
+    color: #B452CD;
+}
+
+.codehilite .sb {
+    color: #CD5555;
+}
+
+.codehilite .sc {
+    color: #CD5555;
+}
+
+.codehilite .sd {
+    color: #CD5555;
+}
+
+.codehilite .s2 {
+    color: #718c00;
+}
+
+.codehilite .se {
+    color: #CD5555;
+}
+
+.codehilite .sh {
+    color: #1c7e71;
+    font-style: italic;
+}
+
+.codehilite .si {
+    color: #CD5555;
+}
+
+.codehilite .sx {
+    color: #cb6c20;
+}
+
+.codehilite .sr {
+    color: #1c7e71;
+}
+
+.codehilite .s1 {
+    color: #CD5555;
+}
+
+.codehilite .ss {
+    color: #CD5555;
+}
+
+.codehilite .bp {
+    color: #658b00;
+}
+
+.codehilite .vc {
+    color: #00688B;
+}
+
+.codehilite .vg {
+    color: #00688B;
+}
+
+.codehilite .vi {
+    color: #00688B;
+}
+
+.codehilite .il {
+    color: #B452CD;
+}
 
 /*********************
   Media Query Classes
@@ -514,3 +799,9 @@ blockquote {
         width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+    .markdown code {
+        padding: 0;
+        margin: 0;
+    }
