@@ -1,17 +1,16 @@
 html
 	head
-		+mobile_meta()
-		meta(name="keywords", content=site.configs.keywords.escaped)
-		meta(name="description", content=site.configs.description.escaped or site.configs.sub_title.escaped)
+		+h.headers()
 		block title
 			title= request.args.s or post.title or tags.join('+') or category.title or site.title
-		+h.load('/template/static/basic.css  /template/static/style.css')
+		+h.load('//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
+		+h.load('/template/static/basic.scss  /template/static/style.scss')
 	body
-		header
-			.header_wrapper
+		header#header
+			.header_container
 				h1.sitetitle
-					a(href='/',title=raw_content)=site.title
-				nav
+					a(href='/',title=site.title)=site.title
+				nav.navbar
 					ul
 						li
 							a(href="/") Home
@@ -26,9 +25,9 @@ html
 								a(href='/'+page.url_path)= page.title
 						li
 							a(href="/feed") RSS
-		#container
+		main#main
 			block content
-		footer
+		footer#footer
 			p
 				span= '&copy; %s '%site.now.year
 					a(href="/", title=site.title)= site.title
@@ -36,7 +35,9 @@ html
 					a(rel="nofollow", target="_blank", href="https://bitcron.com/?s=f")= 'Bircorn.com'
 				span= "Design by "
 					a(rel="nofollow", target="_blank", href="https://github.com/imsuwj/bitcron-mixedpaper")= 'WayJam' 
-				span(style="position:absolute;right:2px;")
+			p
+				span.upyun
 					a(target="_blank", href="https://www.upyun.com/", title="又拍云提供CDN支持")
 						img(src= "//wayjam-blog.b0.upaiyun.com/upyun_logo6.png",style='height:50px;')
-			
+
+		+h.back_to_top(label="<svg viewBox='0 0 24 24'><path fill='none' d='M0 0h24v24H0z'></path><path d='M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z'></path></svg>")

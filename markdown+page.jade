@@ -5,7 +5,5 @@ if request.path.startswith('/page')
 block title
 	title= post.title + " - " + site.title
 block content
-	.detail
-		article.post
-			.content
-				.post_body= post.content
+	article.post.content
+		.post_content= post.content

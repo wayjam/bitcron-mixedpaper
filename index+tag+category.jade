@@ -2,14 +2,11 @@ extends base
 block title
 	title= request.args.s or tags.join('+') or category.title or site.title
 block content
-	.list
+	.post_list.container
 		for post in posts
-			article.post
-				.content
-					span.date= post.date.format('%Y-%m-%d')
-					h3.title
-						a(href=post.url,title=post.title)= post.title
-					.post_body= post.content.opening or post.content.limit(250)
+			article.post.content
+				span.date= post.date.format('%Y-%m-%d')
+				h3.title
+					a(href=post.url,title=post.title)= post.title
+				.post_content= post.content.opening or post.content.limit(250)
 		include include/paginator.jade
-
-			

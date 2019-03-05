@@ -3,19 +3,20 @@ block title
 	title= "Archive - " + site.title
 block content
 	entries = get_data(type='post',limit=25, sort='desc').group('-date:year')
-	article.list
-		ul.list_with_title
-			for year, year_posts in entries
-				li
-                    year_start_date = '%s-1-1'%year
-                    year_end_date = '%s-1-1'%(year.int+1)
-                    yearly_count = get_data(type='post', return_count=True, date_start=year_start_date, date_end=year_end_date)
-					h3= year + "(%s)"%yearly_count
-					ul.listing
-						for post in year_posts
-							li.listing_item
-								a(href=post.url, title=post.title)
-                                    span= post.title
-								    span.date= post.date.format("%m-%d")
+	.container
+		section#archive.post_list.content
+			ul.list_with_title
+				for year, year_posts in entries
+					li
+						year_start_date = '%s-1-1'%year
+						year_end_date = '%s-1-1'%(year.int+1)
+						yearly_count = get_data(type='post', return_count=True, date_start=year_start_date, date_end=year_end_date)
+						h3= year + "(%s)"%yearly_count
+						ul.listing
+							for post in year_posts
+								li.listing_item
+									a(href=post.url, title=post.title)
+										span= post.title
+										span.date= post.date.format("%m-%d")
 
-	include include/paginator.jade
+		include include/paginator.jade
