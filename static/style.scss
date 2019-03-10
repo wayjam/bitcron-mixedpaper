@@ -507,7 +507,8 @@ body {
         form,
         hr,
         table,
-        blockquote {
+        blockquote,
+        .codehilite {
             margin-bottom: 1em;
             word-wrap: break-word;
             word-break: normal;
