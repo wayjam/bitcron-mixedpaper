@@ -452,6 +452,7 @@ body {
         color: #F47F5A;
         font-size: 2em;
         font-weight: 500;
+        margin: 0.8em 0;
 
         a {
             color: #009688;
@@ -490,6 +491,8 @@ body {
     }
 
     .post_content {
+        padding: 0em 0 2em 0em;
+
         a:hover {
             border-bottom-color: #555;
             color: #555;
@@ -517,7 +520,7 @@ body {
         h5,
         h6 {
             font-weight: 500;
-            color: #000;
+            color: #333;
             line-height: 1.2;
         }
 
@@ -578,7 +581,7 @@ body {
         strong,
         b {
             font-weight: bold;
-            color: #000;
+            color: #333;
         }
 
         [draggable] {
