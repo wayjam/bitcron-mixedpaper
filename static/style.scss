@@ -539,7 +539,7 @@ body {
         pre,
         code,
         pre tt {
-            font-family: Courier, 'Courier New', monospace;
+            font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         }
 
         code,
@@ -563,6 +563,8 @@ body {
                 white-space: pre-wrap;
                 background-color: transparent;
                 border-radius: 0;
+                font-size: 0.9em;
+                min-width: 300px;
             }
         }
 
@@ -722,9 +724,10 @@ body {
 /* Code Hightlight */
 .codehilite {
     pre {
-        font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
         border-top: 1px solid #d1d7dc;
         overflow: auto;
+        font-size: 0.9em;
+        min-width: 300px;
     }
 
     .hll {
