@@ -3,13 +3,13 @@ doctype xml
 feed(xmlns="http://www.w3.org/2005/Atom")
 	title= site.title
 	description= site.configs.description.escaped or site.configs.sub_title.escaped
-	link(href="http://{{ request.host }}/")
-	link(ref="self", href="http://{{ request.host }}/feed")
+	link(href="{{request.protocol}}://{{ request.host }}/")
+	link(ref="self", href="{{request.protocol}}://{{request.host}}/feed")
 	if posts
 		updated= posts[0]['date'].strftime('%Y-%m-%dT%H:%M:%SZ')
 	for post in posts
 		entry
-			post_url = 'http://' + request.host + post.url.escaped
+			post_url = request.protocol + '://' + request.host + post.url.escaped
 			title= post.title.escaped
 			link(href=post_url, rel="alternate")
 			updated= post.date.strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -17,3 +17,4 @@ feed(xmlns="http://www.w3.org/2005/Atom")
 			author
 				name= site.configs.author or site.title
 			summary(type="html")= post.content.escaped
+
